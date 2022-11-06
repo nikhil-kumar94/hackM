@@ -14,6 +14,7 @@ class MessageForm(ModelForm):
         model=Person
         fields='__all__'
         
+        
 # class MyUserCreationForm(UserCreationForm):
 #     class Meta:
 #         model=User
