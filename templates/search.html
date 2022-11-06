@@ -1,5 +1,17 @@
+{% extends 'base.html'%}
+{%block content%}
 <h1>searches</h1>
 {%for d in donators%}
-<p>{{d.name}}---{{d.lat}}--{{d.lng}}</p><br>
+<form action="" method="post"> 
+    {% csrf_token %}
+
+<input type="checkbox" name="a" value="{{d.user}}" >{{d.name}}---{{d.lat}}--{{d.lng}} 
+<input type="text" name="b" >
+<button type="submit">submit</button><br>
+
+</form>
+
 {%endfor%}
-<p>{{f}}</p>
+<p>{{f}}</p><br>
+{%endblock content%}
+

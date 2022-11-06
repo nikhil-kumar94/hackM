@@ -1,0 +1,28 @@
+
+{% extends 'base.html'%}
+{%block content%}
+
+<div class="d-flex flex-row justify-content-center align-items-center"  style="margin: 100px;padding: 10px">
+    <form method="post" action="">
+      {%csrf_token%}
+      <div class="form-group">
+        <label for="username">Username</label>
+        
+        <input type="text" class="form-control" id="username" name='username' aria-describedby="emailHelp" placeholder="Enter Username">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="password">Password</label>
+        
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+      </div><br>
+      <span> Don't have Account, <a href="/register/"> register here</a></span> 
+      <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  
+</div>
+
+
+
+{%endblock content%}

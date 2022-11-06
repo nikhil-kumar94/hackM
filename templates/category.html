@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{%block content%}
+
+{%for m in messages%}
+<p>{{m}}</p>
+{%endfor%}
+
+<form action="" method="Post">
+    {%csrf_token%}
+
+    {{form.as_p}}
+    
+    <button type="submit">regiter</button>
+    
+
+</form>
+
+{%endblock content%}
+
